@@ -11,7 +11,7 @@ This API was created using Golang. To setup the API on your local machine, ensur
 
 ## Usage
 
-Live base url: [https://hng-stage2-2jty.onrender.com]
+Live base url: [https://task02-ann404014.b4a.run/api]
 
 ### Create person
 

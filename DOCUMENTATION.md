@@ -3,8 +3,8 @@
 
 This document provides detailed information on how to use the REST API for the "Person" resource. Please refer to this documentation for setup instructions, request/response formats, sample API usage, and any known limitations or assumptions made during development.
 
-> LIVE API Endpoint is https://hgnxbackend-prmpsmart.b4a.run/api
->
+> LIVE API Endpoint is https://task02-ann404014.b4a.run/api
+
 > For the testing script go to [main_test.go](main_test.go)
 
 
