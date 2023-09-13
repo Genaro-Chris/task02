@@ -2,7 +2,7 @@
 
 ## Setup
 
-This API was created using Golang. To setup the API on your local machine, ensure you have installed at least the go version specified in the go.mod file. Clone the repo and run `go get`.
+This API was created using Golang. To setup the API on your local machine, ensure you have installed at least the go version specified in the go.mod file. Clone the repo and run `go mod tidy`.
 
 ## Running the API
 
@@ -66,7 +66,7 @@ This is the endpoint that is used to retrieve the document whose `ID` value in t
 - #### URL Parameter
 
   **Required** \
-   userID=[string]
+   userID=[int]
 
 - #### Example
 

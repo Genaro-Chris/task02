@@ -5,7 +5,7 @@ This document provides detailed information on how to use the REST API for the "
 
 > LIVE API Endpoint is https://hgnxbackend-prmpsmart.b4a.run/api
 >
-> For the testing script go to [main_test.go](test.py)
+> For the testing script go to [main_test.go](https://github.com/Genaro-Chris/task02/blob/main/main_test.go)
 
 
 ## Table of Contents
@@ -51,15 +51,15 @@ The API provides the following endpoints for CRUD operations on the "Person" res
   - Add a new person to the database.
 
 - **Read a Person**:
-  - **GET /api/{name}**
+  - **GET /api/{user_id}**
   - Retrieve details of a person by name.
 
 - **Update a Person**:
-  - **PUT /api/{name}**
+  - **PUT /api/{user_id}**
   - Modify details of an existing person by name.
 
 - **Delete a Person**:
-  - **DELETE /api/{name}**
+  - **DELETE /api/{user_id}**
   - Remove a person from the database by name.
 
 ---
@@ -75,7 +75,7 @@ import requests
 api_url = "http://127.0.0.1:8000/api/"
 
 data = {
-    "name": "Miracle Apata"
+   "name": "Miracle Apata"
 }
 
 response = requests.post(api_url, json=data)
@@ -91,13 +91,13 @@ print(response.json())
 ```
 
 
-### Read a Person (GET /api/{name})
+### Read a Person (GET /api/{user_id})
 
 **Request Format:**
 ```python
 import requests
 
-api_url = "http://127.0.0.1:8000/api/Miracle%20Apata"
+api_url = "http://127.0.0.1:8000/api/1"
 
 response = requests.get(api_url)
 print(response.json())
@@ -106,7 +106,7 @@ print(response.json())
 **Response Format (Success- 200):**
 ```json
 {
-    "ID": "1"
+    "ID": "1",
     "name": "Miracle Apata",
     
 }
@@ -119,7 +119,7 @@ print(response.json())
 }
 ```
 
-### Update a Person (PUT /api/{name})
+### Update a Person (PUT /api/{user_id})
 
 **Request Format:**
 ```python
@@ -138,7 +138,7 @@ print(response.json())
 **Response Format (Success - 200):**
 ```json
 {
-    "ID": 1
+    "ID": 1,
     "name": "Orji Adekunle",
 }
 ```
@@ -150,13 +150,13 @@ print(response.json())
 }
 ```
 
-### Delete a Person (DELETE /api/{name})
+### Delete a Person (DELETE /api/{user_id})
 
 **Request Format:**
 ```python
 import requests
 
-api_url = "http://127.0.0.1:8000/api/Miracle%20Apata"
+api_url = "http://127.0.0.1:8000/api/1"
 
 response = requests.delete(api_url)
 print(response.json())
@@ -183,7 +183,6 @@ Here are some sample API usage scenarios with Python code examples:
 
    data = {
        "name": "Alice Johnson",
-       "age": "25"
    }
 
    response = requests.post(api_url, json=data)
@@ -194,7 +193,7 @@ Here are some sample API usage scenarios with Python code examples:
    ```python
    import requests
 
-   api_url = "http://127.0.0.1:8000/api/Alice%20Johnson"
+   api_url = "http://127.0.0.1:8000/api/1"
 
    response = requests.get(api_url)
    print(response.json())
@@ -204,10 +203,11 @@ Here are some sample API usage scenarios with Python code examples:
    ```python
    import requests
 
-   api_url = "http://127.0.0.1:8000/api/Alice%20Johnson"
+   api_url = "http://127.0.0.1:8000/api/1"
 
    data = {
-       "age": "26"
+      "ID": 1,
+      "name": "Orji Adekunle"
    }
 
    response = requests.put(api_url, json=data)
@@ -218,7 +218,7 @@ Here are some sample API usage scenarios with Python code examples:
    ```python
    import requests
 
-   api_url = "http://127.0.0.1:8000/api/Alice%20Johnson"
+   api_url = "http://127.0.0.1:8000/api/1"
 
    response = requests.delete(api_url)
    print(response.json())
