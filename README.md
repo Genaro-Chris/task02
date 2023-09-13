@@ -223,8 +223,13 @@ This is the endpoint that is used to remove the person document with the corresp
   }
   ```
   
-[Link to test](https://)
+[Link to test](main_test.go)
 
 ## UML Diagram
 
-[UML Diagram](https://)
+![UML Diagram](uml.jpg)
+
+
+## ER Diagram
+
+![ER Diagram](er_diagram.png)

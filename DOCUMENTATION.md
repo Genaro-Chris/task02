@@ -5,16 +5,22 @@ This document provides detailed information on how to use the REST API for the "
 
 > LIVE API Endpoint is https://hgnxbackend-prmpsmart.b4a.run/api
 >
-> For the testing script go to [main_test.go](https://github.com/Genaro-Chris/task02/blob/main/main_test.go)
+> For the testing script go to [main_test.go](main_test.go)
 
 
 ## Table of Contents
 
-- [Setup Instructions](#setup-instructions)
-- [API Endpoints](#api-endpoints)
-- [Request/Response Formats](#requestresponse-formats)
-- [Sample API Usage](#sample-api-usage)
-- [Known Limitations and Assumptions](#known-limitations-and-assumptions)
+- [Project Documentation](#project-documentation)
+  - [Table of Contents](#table-of-contents)
+  - [Setup Instructions](#setup-instructions)
+  - [API Endpoints](#api-endpoints)
+  - [Request/Response Formats](#requestresponse-formats)
+    - [Create a Person (POST /api/)](#create-a-person-post-api)
+    - [Read a Person (GET /api/{user\_id})](#read-a-person-get-apiuser_id)
+    - [Update a Person (PUT /api/{user\_id})](#update-a-person-put-apiuser_id)
+    - [Delete a Person (DELETE /api/{user\_id})](#delete-a-person-delete-apiuser_id)
+  - [Sample API Usage](#sample-api-usage)
+  - [Known Limitations and Assumptions](#known-limitations-and-assumptions)
 
 ---
 
